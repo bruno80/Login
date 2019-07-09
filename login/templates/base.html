@@ -103,7 +103,11 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">
-                                <img src="{% static 'assets/images/users/1.jpg' %}" alt="user" class="profile-pic m-r-10" />Markarn Doe</a>
+                                {% if request.user.username %}
+                                <img src="{% static 'assets/images/users/1.jpg' %}" alt="user" class="profile-pic m-r-10" />
+                                <a href="/accounts/logout/">{{ request.user.username }}</a>
+                                {% endif %}
+                            </a>
                         </li>
                     </ul>
                 </div>
