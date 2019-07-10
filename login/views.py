@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required, permission_required
@@ -12,6 +12,6 @@ def list(request):
     return render(request, 'user/list.html',{'users':users}) 
 
 @permission_required("user_delete")
-def user_delete(request, id):
-    user = User.objects.get(pk=id).delete()
+def user_delete(request, user_id):
+    user = User.objects.get(pk=user_id).delete()
     return redirect("/login/list/")
