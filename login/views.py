@@ -15,3 +15,4 @@ def list(request):
 def user_delete(request, user_id):
     user = User.objects.get(pk=user_id).delete()
     return redirect("/login/list/")
+

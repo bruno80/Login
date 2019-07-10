@@ -53,14 +53,16 @@
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
 
                             <!-- Light Logo icon -->
-                            <img src="{% static 'assets/images/logo-light-icon.png' %}" alt="homepage" class="light-logo" />
+                            <img src="{% static 'assets/images/logo-light-icon.png' %}" alt="homepage"
+                                class="light-logo" />
                         </b>
                         <!--End Logo icon -->
                         <!-- Logo text -->
                         <span>
 
                             <!-- Light Logo text -->
-                            <img src="{% static 'assets/images/logo-light-text.png' %}" class="light-logo" alt="homepage" />
+                            <img src="{% static 'assets/images/logo-light-text.png' %}" class="light-logo"
+                                alt="homepage" />
                         </span>
                     </a>
                 </div>
@@ -74,7 +76,8 @@
                     <ul class="navbar-nav mr-auto mt-md-0">
                         <!-- This is  -->
                         <li class="nav-item">
-                            <a class="nav-link nav-toggler hidden-md-up text-muted waves-effect waves-dark" href="javascript:void(0)">
+                            <a class="nav-link nav-toggler hidden-md-up text-muted waves-effect waves-dark"
+                                href="javascript:void(0)">
                                 <i class="mdi mdi-menu"></i>
                             </a>
                         </li>
@@ -82,7 +85,8 @@
                         <!-- Search -->
                         <!-- ============================================================== -->
                         <li class="nav-item hidden-sm-down search-box">
-                            <a class="nav-link hidden-sm-down text-muted waves-effect waves-dark" href="javascript:void(0)">
+                            <a class="nav-link hidden-sm-down text-muted waves-effect waves-dark"
+                                href="javascript:void(0)">
                                 <i class="ti-search"></i>
                             </a>
                             <form class="app-search">
@@ -101,10 +105,11 @@
                         <!-- Profile -->
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false">
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href=""
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 {% if request.user.username %}
-                                <img src="{% static 'assets/images/users/1.jpg' %}" alt="user" class="profile-pic m-r-10" />
+                                <img src="{% static 'assets/images/users/1.jpg' %}" alt="user"
+                                    class="profile-pic m-r-10" />
                                 <a href="/accounts/logout/">{{ request.user.username }}</a>
                                 {% endif %}
                             </a>
@@ -169,7 +174,8 @@
                         </li>
                     </ul>
                     <div class="text-center m-t-30">
-                        <a href="https://wrappixel.com/templates/materialpro/" class="btn waves-effect waves-light btn-warning hidden-md-down"> Upgrade to Pro</a>
+                        <a href="https://wrappixel.com/templates/materialpro/"
+                            class="btn waves-effect waves-light btn-warning hidden-md-down"> Upgrade to Pro</a>
                     </div>
                 </nav>
                 <!-- End Sidebar navigation -->
@@ -217,7 +223,8 @@
                         </ol>
                     </div>
                     <div class="col-md-7 col-4 align-self-center">
-                        <a href="https://wrappixel.com/templates/materialpro/" class="btn waves-effect waves-light btn-danger pull-right hidden-sm-down">
+                        <a href="https://wrappixel.com/templates/materialpro/"
+                            class="btn waves-effect waves-light btn-danger pull-right hidden-sm-down">
                             Upgrade to Pro</a>
                     </div>
                 </div>
@@ -269,6 +276,7 @@
     <script src="{% static 'assets/plugins/sticky-kit-master/dist/sticky-kit.min.js' %}"></script>
     <!--Custom JavaScript -->
     <script src="{% static 'html/js/custom.min.js' %}"></script>
+    {% block scripts %} {% endblock %}
 </body>
 
 </html>
